@@ -1,6 +1,6 @@
 import requests
 from lxml import etree
-url="http://www.baidu.com"
+url="https://www.baidu.com"
 res=requests.get(url)
 html=res.text
 tree=etree.HTML(html)
