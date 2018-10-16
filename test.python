@@ -1,0 +1,9 @@
+import requests
+from lxml import etree
+url="http://www.baidu.com"
+res=requests.get(url)
+html=res.text
+tree=etree.HTML(html)
+result=tree.xpath('//div//text()')
+for div in result:
+  print(div)
